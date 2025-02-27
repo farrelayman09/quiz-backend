@@ -1,0 +1,10 @@
+#TS related
+.env
+
+#IDE related
+.idea
+.vscode
+
+# MacOS related
+.DS_store
+**/.DS_store
