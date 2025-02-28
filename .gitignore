@@ -1,5 +1,6 @@
 #TS related
 .env
+node_modules/
 
 #IDE related
 .idea
