@@ -1,6 +1,7 @@
 #TS related
 .env
 node_modules/
+dist/
 
 #IDE related
 .idea
