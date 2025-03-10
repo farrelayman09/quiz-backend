@@ -11,6 +11,10 @@ const TryoutSchema = new mongoose.Schema({
         type: String, 
         required: [true, "Harus ada category"] 
     },  
+    creator: {
+        type: String,
+        required: [true, "Harus ada creator"]
+    },
     createdAt: { 
         type: Date, 
         default: Date.now 

@@ -4,6 +4,7 @@ interface TryoutInterface {
   _id: mongoose.Types.ObjectId; // ObjectId otomatis dari MongoDB
   title: string;
   category: string;
+  creator: string;
   createdAt: Date;
   createdBy: mongoose.Types.ObjectId; // ref ke User
   updatedAt: Date;

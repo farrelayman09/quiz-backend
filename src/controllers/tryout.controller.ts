@@ -8,7 +8,7 @@ import { Response } from "express";
 const createTryout = async (req: UserRequestInterface, res: Response) => {
     const { title, category }:CreateTryoutRequest = req.body as CreateTryoutRequest
     try {
-        const tryout = new TryoutModel({ title, category, createdBy: req.user._id })
+        const tryout = new TryoutModel({ title, category, creator: req.user.username, createdBy: req.user._id })
         await tryout.save()
         res.json(tryout)
     }
