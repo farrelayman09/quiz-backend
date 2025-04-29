@@ -30,8 +30,8 @@ Practice tests (tryout) web application implementing robust access control with 
 
 1. Clone the repository
 ``` 
-git clone https://github.com/farrelayman09/quiz-backend.git
-cd quiz-backend
+git clone https://github.com/farrelayman09/quizzer-backend.git
+cd quizzer-backend
 ```
 
 2. Install dependencies:
