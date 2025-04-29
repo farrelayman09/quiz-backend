@@ -29,7 +29,7 @@ const createQuestion = async (req: UserRequestInterface, res: Response): Promise
 
         // Hitung ulang jumlah pertanyaan
         const totalQuestions = await QuestionModel.countDocuments({ tryout_id: tryoutId });
-        if (tryout.status === "draft" && totalQuestions >= 3) {
+        if (tryout.status === "draft" && totalQuestions >= 1) {
             await TryoutModel.findByIdAndUpdate(tryoutId, { status: "ready" });
         }
         // json semua pertanyaan yang  di tryout ini
@@ -174,8 +174,8 @@ const deleteQuestion = async (req: UserRequestInterface, res: Response): Promise
         const remainingQuestions = await QuestionModel.countDocuments({ tryout_id: tryoutId });
         // console.log("Sisa pertanyaan sebelum delete:", remainingQuestions);
 
-        // Jika kurang dari 3, ubah status ke "draft"
-        if (remainingQuestions <= 3) {
+        // Jika kurang dari 1, ubah status ke "draft"
+        if (remainingQuestions <= 1) {
             await TryoutModel.findByIdAndUpdate(tryoutId, { status: "draft" });
         }
 

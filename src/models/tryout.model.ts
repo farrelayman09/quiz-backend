@@ -40,8 +40,8 @@ const TryoutModel = mongoose.model<TryoutInterface & mongoose.Document>('TryoutM
 export async function setTryoutReady(tryoutId: string): Promise<boolean> {
     const questionCount = await QuestionModel.countDocuments({ tryout_id: tryoutId });
 
-    if (questionCount < 3) {
-        throw new Error("Tryout must have at least 3 questions to be set as ready.");
+    if (questionCount < 1) {
+        throw new Error("Tryout must have at least 1 questions to be set as ready.");
     }
 
     await TryoutModel.findByIdAndUpdate(tryoutId, { status: "ready" });
