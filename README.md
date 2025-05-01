@@ -1,6 +1,6 @@
-# Quizzer
+# Quizzer API
 
-A scalable and robust backend API for handling online tryouts. Developed with Express, TypeScript and MongoDB.
+A scalable and robust backend API for handling online tryouts, developed using Express, TypeScript, and MongoDB. The API is fully integrated into the [Quizzer][QuizzerFE-url] web application, enabling seamless interaction between the user interface and backend services.
 
 ## Description
 
@@ -139,3 +139,4 @@ Authorization: Bearer <token>
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
 [Node-url]: https://nodejs.org/en
+[QuizzerFE-url]: https://github.com/farrelayman09/quizzer-frontend
